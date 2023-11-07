@@ -1,0 +1,7 @@
+path: A:\vehicle detection and counting\data
+train: train/images
+val: valid/images
+
+# Model
+nc: 1
+names: ['Auto']

@@ -1,0 +1,5 @@
+names:
+- taxi
+nc: 1
+train: A:\vehicle detection and counting\data\train\images
+val: A:\vehicle detection and counting\data\valid\images

@@ -86,7 +86,11 @@ def count_vehicles(bbox1_idx,counter,name):
 # creating wndiow and reading videos   
 cv2.namedWindow('RGB')
 cv2.setMouseCallback('RGB', RGB)
+<<<<<<< HEAD
+cap=cv2.VideoCapture("G:\\NIT STUDENT PROJECT\\Monday Clip\\192.168.1.100_ch8_20230807120002_20230807160003.asf")
+=======
 cap=cv2.VideoCapture("F:\\NIT STUDENT PROJECT\\Monday Clip\\192.168.1.100_ch8_20230807120002_20230807160003.asf")
+>>>>>>> 01711d2af4d3336a4e0578df60d71bca03772c5c
 
 # reading coco file
 my_file = open("C:\\Users\\Dastaan DZ\\Documents\\Projects\\yolo\\coco.txt", "r")
@@ -185,10 +189,17 @@ while True:
     bbox3_idx=tracker_truck.update(list3)
     bbox4_idx=tracker_bus.update(list4)
     # getting the count of different vehicles
+<<<<<<< HEAD
+    counter1 = count_vehicles(bbox1_idx,counter1,'motorcycle')
+    counter2 = count_vehicles(bbox2_idx,counter2,'car')
+    # counter3 = count_vehicles(bbox3_idx,counter3,'truck')
+    counter4 = count_vehicles(bbox4_idx,counter4,'bus')
+=======
     # counter1 = count_vehicles(bbox1_idx,counter1)
     counter2 = count_vehicles(bbox2_idx,counter2,'car')
     # counter3 = count_vehicles(bbox3_idx,counter3)
     # counter4 = count_vehicles(bbox4_idx,counter4)
+>>>>>>> 01711d2af4d3336a4e0578df60d71bca03772c5c
 
     # Threshold for covering the vehicle in down direction
     cv2.line(frame, (96, 260), (867, 290), (0, 0, 255), 2)
@@ -204,6 +215,15 @@ while True:
     # getting the count of different vehicles
     motorcyclec=(len(counter1))
     carc=(len(counter2))
+<<<<<<< HEAD
+    # truckc=(len(counter3))
+    busc=(len(counter4))
+    # showing values on screen
+    cvzone.putTextRect(frame,f'motorcyclec:-{motorcyclec}',(19,30),2,1)
+    cvzone.putTextRect(frame,f'carc:-{carc}',(19,60),2,1)
+    # cvzone.putTextRect(frame,f'truckc:-{truckc}',(19,90),2,1)
+    cvzone.putTextRect(frame,f'busc:-{busc}',(19,120),2,1)
+=======
     truckc=(len(counter3))
     busc=(len(counter4))
     # showing values on screen
@@ -211,6 +231,7 @@ while True:
     cvzone.putTextRect(frame,f'carc:-{carc}',(19,60),2,1)
     # cvzone.putTextRect(frame,f'truckc:-{truckc}',(19,90),2,1)
     # cvzone.putTextRect(frame,f'busc:-{busc}',(19,120),2,1)
+>>>>>>> 01711d2af4d3336a4e0578df60d71bca03772c5c
 
     # cvzone.putTextRect(frame,f'motorcyclec:-{count_motorcycle}',(19,30),2,1)
 
